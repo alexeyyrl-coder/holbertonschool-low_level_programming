@@ -2,20 +2,19 @@
 #include "dog.h"
 
 /**
- * print_dog - print a variable of type struct dog
+ * print_dog - Prints a variable of type struct dog
  * @d: Pointer to the dog structure
  */
 void print_dog(struct dog *d)
 {
-
-        if (d == 0)
-        {
-                return;
-        }
+	if (d == 0)
+	{
+		return;
+	}
 
 	if (d->name == 0)
 	{
-        	printf("Name: (nil)\n");
+		printf("Name: (nil)\n");
 	}
 	else
 	{
@@ -32,5 +31,4 @@ void print_dog(struct dog *d)
 	{
 		printf("Owner: %s\n", d->owner);
 	}
-
 }
