@@ -6,9 +6,7 @@
  * @name: Dog's name
  * @age: Dog's age
  * @owner: Dog's owner
- */
-
-/*
+ *
  * void print_dog(struct dog *d);
  * void free_dog(dog_t *d);
  */
