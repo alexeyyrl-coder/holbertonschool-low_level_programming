@@ -7,7 +7,6 @@
  * @age: Age to initialize
  * @owner: Owner to initialize
  */
-
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 
