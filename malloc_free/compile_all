@@ -1,0 +1,11 @@
+#!/bin/bash
+
+FLAGS="-Wall -Werror -Wextra -pedantic -std=gnu89"
+
+for file in *.c
+do
+	if [ -f "$file" ]; then
+		output="${file%.c}.o"
+		gcc $FLAGS -c "$file" -o "$output"
+	fi
+done

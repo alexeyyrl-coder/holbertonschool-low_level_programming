@@ -1,0 +1,14 @@
+#!/bin/bash
+
+cd "$(dirname "$0")" || exit 1
+
+chmod u+x compile_all all_good_thing over_craft 2>/dev/null
+
+git add . ':!README.md' ':!*/README.md'
+
+if git diff --cached --quiet; then
+	echo "Nothing to commit"
+else
+	git commit -m "add all good thing"
+	git push origin main
+fi
