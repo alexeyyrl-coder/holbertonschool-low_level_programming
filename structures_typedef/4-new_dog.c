@@ -61,9 +61,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	i = 0;
 	while (owner[i] != '\0')
 	{
-	 	dog->name[i] = source[i];
+	 	dog->name[i] = name[i];
 		printf("d");
-		d++;
+		i++;
 	}
 	dog->name[i] = '\0';
 	
