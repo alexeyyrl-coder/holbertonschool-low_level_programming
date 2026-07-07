@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include "dog.h"
+#include dog.h
 
 /**
  * _strlen - Returns the length of a string
@@ -13,11 +13,35 @@ int _strlen(char *s)
 
 	i = 0;
 	while (s[i] != '\0')
-	{
 		i++;
-	}
 
 	return (i);
+}
+
+/**
+ * _strdup - Duplicates a string
+ * @str: String to duplicate
+ *
+ * Return: Pointer to the duplicated string, or NULL
+ */
+char *_strdup(char *str)
+{
+	char *dup;
+	int i;
+
+	dup = malloc(sizeof(char) * (_strlen(str) + 1));
+	if (dup == 0)
+		return (0);
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		dup[i] = str[i];
+		i++;
+	}
+	dup[i] = '\0';
+
+	return (dup);
 }
 
 /**
@@ -31,44 +55,25 @@ int _strlen(char *s)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
-	int i;
 
 	dog = malloc(sizeof(dog_t));
 	if (dog == 0)
-	{
 		return (0);
-	}
 
-	dog->name = malloc(sizeof(char) * (_strlen(name) + 1));
+	dog->name = _strdup(name);
 	if (dog->name == 0)
 	{
 		free(dog);
 		return (0);
 	}
 
-	dog->owner = malloc(sizeof(char) * (_strlen(owner) + 1));
+	dog->owner = _strdup(owner);
 	if (dog->owner == 0)
 	{
 		free(dog->name);
 		free(dog);
 		return (0);
 	}
-
-	i = 0;
-	while (name[i] != '\0')
-	{
-		dog->name[i] = name[i];
-		i++;
-	}
-	dog->name[i] = '\0';
-
-	i = 0;
-	while (owner[i] != '\0')
-	{
-		dog->owner[i] = owner[i];
-		i++;
-	}
-	dog->owner[i] = '\0';
 
 	dog->age = age;
 
