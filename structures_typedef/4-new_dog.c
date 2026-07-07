@@ -1,6 +1,12 @@
 #include "dog.h"
 #include <stdlib.h>
 
+/**
+ * _strlen - Returns the length of a string
+ * @s: String to measure
+ *
+ * Return: Length of the string
+ */
 int _strlen(char *s)
 {
 	int i;
@@ -14,6 +20,14 @@ int _strlen(char *s)
 	return (i);
 }
 
+/**
+ * new_dog - Creates a new dog
+ * @name: Dog's name
+ * @age: Dog's age
+ * @owner: Dog's owner
+ *
+ * Return: Pointer to the new dog, or NULL if it fails
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
