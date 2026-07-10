@@ -27,7 +27,7 @@ void _set_zero(char *bytes, unsigned int total)
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ptr;
+	oid *ptr;
 	unsigned int total;
 
 	if (nmemb == 0)
