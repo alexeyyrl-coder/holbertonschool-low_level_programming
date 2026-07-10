@@ -2,25 +2,6 @@
 #include "main.h"
 
 /**
- * free_lines - frees allocated lines of a grid
- * @grid: grid to free
- * @height: number of lines to free
- */
-static void free_lines(int **grid, int height)
-{
-	int i;
-
-	i = 0;
-	while (i < height)
-	{
-		free(grid[i]);
-		i++;
-	}
-
-	free(grid);
-}
-
-/**
  * alloc_grid - returns a pointer to a 2 dimensional array of integers
  * @width: width of the grid
  * @height: height of the grid
@@ -32,14 +13,15 @@ int **alloc_grid(int width, int height)
 	int **grid;
 	int h;
 	int w;
-
-	if (width <= 0 || height <= 0)
+	int i;
+	
+	if(width <= 0 || height <= 0)
 	{
 		return (NULL);
 	}
 
 	grid = malloc(sizeof(int *) * height);
-	if (grid == NULL)
+	if(grid == NULL)
 	{
 		return (NULL);
 	}
@@ -50,7 +32,13 @@ int **alloc_grid(int width, int height)
 		grid[h] = malloc(sizeof(int) * width);
 		if (grid[h] == NULL)
 		{
-			free_lines(grid, h);
+			i = 0;
+			while (i < h)
+			{
+				free(grid[i]);
+				i++;
+			}
+			free(grid);
 			return (NULL);
 		}
 
@@ -62,6 +50,5 @@ int **alloc_grid(int width, int height)
 		}
 		h++;
 	}
-
 	return (grid);
 }
