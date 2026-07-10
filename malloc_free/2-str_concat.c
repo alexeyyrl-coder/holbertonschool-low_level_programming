@@ -2,66 +2,58 @@
 #include "main.h"
 
 /**
- * free_lines - frees allocated lines of a grid
- * @grid: grid to free
- * @height: number of lines to free
+ * str_len - returns the length of a string
+ * @s: string to check
+ *
+ * Return: length of the string
  */
-static void free_lines(int **grid, int height)
+static int str_len(char *s)
 {
-	int i;
+	int len;
 
-	i = 0;
-	while (i < height)
-	{
-		free(grid[i]);
-		i++;
-	}
+	len = 0;
+	while (s[len] != '\0')
+		len++;
 
-	free(grid);
+	return (len);
 }
 
 /**
- * alloc_grid - returns a pointer to a 2 dimensional array of integers
- * @width: width of the grid
- * @height: height of the grid
+ * str_concat - concatenates two strings
+ * @s1: first string
+ * @s2: second string
  *
- * Return: pointer to the grid, or NULL on failure
+ * Return: pointer to a new string, or NULL if it fails
  */
-int **alloc_grid(int width, int height)
+char *str_concat(char *s1, char *s2)
 {
-	int **grid;
-	int h;
-	int w;
+	char *str;
+	int i;
+	int j;
+	int len1;
+	int len2;
 
-	if (width <= 0 || height <= 0)
-	{
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	len1 = str_len(s1);
+	len2 = str_len(s2);
+	str = malloc(sizeof(char) * (len1 + len2 + 1));
+	if (str == NULL)
 		return (NULL);
-	}
-
-	grid = malloc(sizeof(int *) * height);
-	if (grid == NULL)
+	i = 0;
+	while (i < len1)
 	{
-		return (NULL);
+		str[i] = s1[i];
+		i++;
 	}
-
-	h = 0;
-	while (h < height)
+	j = 0;
+	while (j < len2)
 	{
-		grid[h] = malloc(sizeof(int) * width);
-		if (grid[h] == NULL)
-		{
-			free_lines(grid, h);
-			return (NULL);
-		}
-
-		w = 0;
-		while (w < width)
-		{
-			grid[h][w] = 0;
-			w++;
-		}
-		h++;
+		str[i + j] = s2[j];
+		j++;
 	}
-
-	return (grid);
+	str[i + j] = '\0';
+	return (str);
 }
