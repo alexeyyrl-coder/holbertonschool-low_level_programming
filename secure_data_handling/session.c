@@ -64,5 +64,4 @@ void session_destroy(session_t *s)
 	free(s->id);
 
 	free(s->data);
-	free(s);
 }
