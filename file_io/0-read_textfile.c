@@ -1,45 +1,47 @@
 #include "main.h"
 
 /**
- * create_file - creates a file and writes text into it
- * @filename: name of the file to create
- * @text_content: NULL-terminated string to write
+ * read_textfile - reads a text file and prints it to standard output
+ * @filename: name of the file to read
+ * @letters: maximum number of characters to read
  *
- * Return: 1 on success, -1 on failure
+ * Return: number of characters printed, or 0 on failure
  */
-int create_file(const char *filename, char *text_content)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
-	size_t len;
-	ssize_t written;
+	char *buffer;
+	ssize_t bytes_read;
+	ssize_t bytes_written;
 
-	if (filename == NULL)
-		return (-1);
+	if (filename == NULL || letters == 0)
+		return (0);
 
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+	fd = open(filename, O_RDONLY);
 	if (fd == -1)
-		return (-1);
+		return (0);
 
-	if (text_content == NULL)
-	{
-		if (close(fd) == -1)
-			return (-1);
-		return (1);
-	}
-
-	len = 0;
-	while (text_content[len] != '\0')
-		len++;
-
-	written = write(fd, text_content, len);
-	if (written == -1 || written != (ssize_t)len)
+	buffer = malloc(letters);
+	if (buffer == NULL)
 	{
 		close(fd);
-		return (-1);
+		return (0);
 	}
 
-	if (close(fd) == -1)
-		return (-1);
+	bytes_read = read(fd, buffer, letters);
+	if (bytes_read <= 0)
+	{
+		close(fd);
+		free(buffer);
+		return (0);
+	}
 
-	return (1);
+	bytes_written = write(STDOUT_FILENO, buffer, bytes_read);
+	close(fd);
+	free(buffer);
+
+	if (bytes_written != bytes_read)
+		return (0);
+
+	return (bytes_written);
 }
