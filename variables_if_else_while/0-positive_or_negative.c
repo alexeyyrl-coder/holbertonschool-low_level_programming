@@ -2,7 +2,7 @@
 #include <time.h>
 #include <stdio.h>
 
-/*
+/**
 * ask - checks if a number is positive, negative or zero
 * @askus: the number to be checked
 * Return: Always 0 (Success)
@@ -28,9 +28,9 @@ printf("%d is negative\n", askus);
 return (0);
 }
 
-/*
-* main - Entry point
-*
+/**
+* main - generates a random number and checks if it is positive.
+* negative or zero
 * Return: Always 0 (Success)
 */
 
