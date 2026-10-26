@@ -8,7 +8,7 @@
 
 int main()
 {
-    int n;
+    int n = 0;
 
     if (n == 0)
     {
