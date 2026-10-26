@@ -13,8 +13,13 @@ int alphabet = 0;
 for (alphabet = 0; alphabet <= 9; alphabet++)
 {
 putchar('0' + alphabet);
+
+if (alphabet != 9)
+{
 putchar(',');
 putchar(' ');
+}
+
 }
 
 putchar('\n');
