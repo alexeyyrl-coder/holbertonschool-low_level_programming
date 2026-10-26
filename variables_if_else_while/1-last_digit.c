@@ -11,7 +11,7 @@ int askus = ask % 10;
 
 if (askus == 0)
 {
-printf("%d and is 0\n", basku);
+printf("Last digit of %d is 0 and is 0\n", basku);
 }
 
 if (askus > 5)
