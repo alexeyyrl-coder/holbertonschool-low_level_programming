@@ -1,4 +1,5 @@
-#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /*
  * main - Entry point
@@ -6,24 +7,32 @@
  * Return: Always 0 (Success)
  */
 
-int main()
+int ask(int askus)
 {
-    int n = 0;
-
-    if (n == 0)
+    if (askus == 0)
     {
-        printf("%d is zero", n);
+        printf("%d is zero", askus);
     }
     
-    if (n > 0)
+    if (askus > 0)
     {
-        printf("%d is positive", n);
+        printf("%d is positive", askus);
     }
     
-    if (n < 0)
+    if (askus < 0)
     {
-        printf("%d is negative", n);
+        printf("%d is negative", askus);
     }
 
     return 0;
+}
+
+int main(void)
+{
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	ask(n);
+	return (0);
 }
