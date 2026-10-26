@@ -21,7 +21,6 @@ for (Ulphabet = 'A'; Ulphabet <= 'Z'; Ulphabet++)
 putchar(Ulphabet);
 }
 
-putchar('$');
 putchar('\n');
 return (0);
 }
