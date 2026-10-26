@@ -1,0 +1,46 @@
+
+#!/bin/bash
+
+# Vérifier que nous sommes dans un dépôt Git
+if ! git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+    echo "Erreur : tu n'es pas dans un dépôt Git."
+    exit 1
+fi
+
+# Récupérer le nom du fichier
+filename="$1"
+
+# Demander le fichier si aucun argument
+if [[ -z "$filename" ]]; then
+    read -e -r -p "Nom du fichier : " filename
+fi
+
+# Quitter avec :wq
+if [[ "$filename" == ":wq" ]]; then
+    exit 0
+fi
+
+# Vérifier le fichier
+if [[ -z "$filename" ]]; then
+    echo "Erreur : aucun fichier sélectionné."
+    exit 1
+fi
+
+# Ajouter le fichier à Git
+git add -- "$filename" || exit 1
+
+# Demander le message du commit
+read -e -r -p "Message du commit : " message || exit 1
+
+if [[ -z "$message" || "$message" == ":wq" ]]; then
+    echo "Commit annulé."
+    exit 1
+fi
+
+# Créer le commit
+git commit -m "$message" || exit 1
+
+# Envoyer sur GitHub
+git push || exit 1
+
+echo "Opération Git terminée avec succès !"
