@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 /**
- * main - checks the last digit of a number
- * alphabet: the number to be checked
+ * main - print alpabet
+ * alphabet: tht char who be print
  * Return: Always 0 (Success)
  */
 
