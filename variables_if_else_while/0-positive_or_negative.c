@@ -7,23 +7,22 @@
 * @askus: the number to be checked
 * Return: Always 0 (Success)
 */
-
 int ask(int askus)
 {
 
 if (askus == 0)
 {
-printf("%d is zero/d", askus);
+printf("%d is zero\n", askus);
 }
 
 if (askus > 0)
 {
-printf("%d is positive/d", askus);
+printf("%d is positive\n", askus);
 }
 
 if (askus < 0)
 {
-printf("%d is negative/d", askus);
+printf("%d is negative\n", askus);
 }
 
 return (0);
