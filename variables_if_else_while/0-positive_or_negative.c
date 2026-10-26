@@ -1,7 +1,10 @@
 #include <stdio.h>
 
-int main(int n)
+
+
+int main()
 {
+    int n;
 
     if (n == 0)
     {
@@ -17,4 +20,6 @@ int main(int n)
     {
         printf("%d is negative", n);
     }
+
+    return 0;
 }
