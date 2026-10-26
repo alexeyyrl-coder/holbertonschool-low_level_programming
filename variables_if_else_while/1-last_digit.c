@@ -6,21 +6,22 @@
 int last_digit(int ask)
 {
 
+int basku = ask;
 int askus = ask % 10;
 
 if (askus == 0)
 {
-printf("%d and is 0\n", askus);
+printf("%d and is 0\n", basku);
 }
 
 if (askus > 5)
 {
-printf("%d and is greater than 5\n", askus);
+printf("Last digit of %d is %d and is greater than 5\n", basku,askus);
 }
 
 if (askus < 6 && askus != 0)
 {
-printf("%d and is less than 6 and not 0\n", askus);
+printf("Last digit of %d is %d and is less than 6 and not 0\n", basku,askus);
 }
 return (0);
 }
