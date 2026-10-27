@@ -1,6 +1,8 @@
-#ifndef main.h
-#define main.h
+#ifndef MAIN_H
+#define MAIN_H
 
 /* contenu du header ici */
+
+int _putchar(char);
 
 #endif
