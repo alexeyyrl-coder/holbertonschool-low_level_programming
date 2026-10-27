@@ -18,7 +18,7 @@ return;
 }
 
 
-while (n <= 98)
+while (n < 98)
 {
 
 if (n == 98)
