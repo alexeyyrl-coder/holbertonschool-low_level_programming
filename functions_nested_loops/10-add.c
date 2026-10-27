@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_sign - Checks if a character is lowercase
+ * add - Checks if a character is lowercase
  * @a: Character to check
  * @b: adding
  *
