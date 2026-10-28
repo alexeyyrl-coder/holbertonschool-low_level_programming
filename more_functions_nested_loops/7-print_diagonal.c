@@ -15,7 +15,7 @@ int i;
 for (cout = 0; cout < zizi; cout++)
 {
 
-for (i = 0; i < cout; i++)
+for (i = 0; i < zizi; i++)
 {
 _putchar(' ');
 }
@@ -28,8 +28,6 @@ _putchar('\\');
 
 _putchar('\n');
 }
-
-
 
 return;
 }
