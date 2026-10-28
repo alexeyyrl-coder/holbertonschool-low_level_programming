@@ -19,18 +19,20 @@ if (dark % 3 == 0 && dark % 5 == 0)
 {
 printf("FizzBuzz ");
 }
-
-if (dark % 3 == 0)
+else if (dark % 3 == 0)
 {
 printf("Fizz ");
 }
-
-if (dark % 5 == 0)
+else if (dark % 5 == 0)
 {
-printf("Buzz ");
+printf("Buzz");
+if (dark < 100)
+{
+    printf(" ");
 }
 
-if (dark % 5 != 0 && dark % 3 != 0)
+}
+else if (dark % 5 != 0 && dark % 3 != 0)
 {
 printf("%d ", dark);
 }
