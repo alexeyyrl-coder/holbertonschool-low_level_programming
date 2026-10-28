@@ -12,7 +12,7 @@ void print_diagonal(int zizi)
 int cout;
 int i;
 
-if (zizi >= 0)
+if (zizi <= 0)
 {
 _putchar('\n');
 return;
