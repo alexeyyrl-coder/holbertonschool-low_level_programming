@@ -22,5 +22,7 @@ _putchar('0' + c);
 _putchar('\n');
 }
 
+_putchar('\n');
+
 return;
 }
