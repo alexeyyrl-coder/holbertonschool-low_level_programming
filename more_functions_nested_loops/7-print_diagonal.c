@@ -15,7 +15,7 @@ int i;
 if (zizi >= 0)
 {
 _putchar('\n');
-return;
+return (0);
 }
 
 
@@ -36,5 +36,5 @@ _putchar('\\');
 _putchar('\n');
 }
 
-return;
+return (0);
 }
