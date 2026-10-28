@@ -21,7 +21,7 @@ _putchar(' ');
 }
 
 
-if (cout == zizi -1 || zizi != 0)
+if (cout == zizi -1)
 {
 _putchar('\\');
 }
