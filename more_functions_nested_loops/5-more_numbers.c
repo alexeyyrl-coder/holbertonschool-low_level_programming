@@ -10,19 +10,27 @@
 void more_numbers(void)
 {
 int c;
+int ff;
 
-for (c = 0; c >= 10; c++)
+for (ff = 0; ff < 10; ff++)
 {
 
-for (c = 0; c >= 14; c++)
+for (c = 0; c <= 14; c++)
 {
-_putchar('0' + c);
+
+if (c >= 10)
+{
+
+_putchar('0' + c / 10);
+
+}
+
+_putchar('0' + c % 10);
+
 }
 
 _putchar('\n');
 }
-
-_putchar('\n');
 
 return;
 }
