@@ -26,9 +26,10 @@ printf("Fizz ");
 else if (dark % 5 == 0)
 {
 printf("Buzz");
+
 if (dark < 100)
 {
-    printf(" ");
+printf(" ");
 }
 
 }
