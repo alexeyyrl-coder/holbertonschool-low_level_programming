@@ -12,16 +12,23 @@ void print_diagonal(int zizi)
 int cout;
 int i;
 
+if (zizi >= 0)
+{
+_putchar('\n');
+return;
+}
+
+
 for (cout = 0; cout < zizi; cout++)
 {
 
-for (i = 0; i < zizi; i++)
+for (i = 0; i < cout; i++)
 {
 _putchar(' ');
 }
 
 
-if (cout == zizi -1)
+if (zizi != 0)
 {
 _putchar('\\');
 }
