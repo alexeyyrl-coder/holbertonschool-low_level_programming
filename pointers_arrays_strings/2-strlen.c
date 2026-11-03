@@ -10,7 +10,7 @@ int _strlen(char *stix)
 {
 	int count = 0;
 
-	while (*stix != "\n")
+	while (*stix != '\0')
 	{
 		count++;
 		*stix++;
