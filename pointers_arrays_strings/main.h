@@ -15,5 +15,6 @@ void print_array(int *a, int n);
 char *_strcpy(char *dest, char *src);
 int _atoi(char *s);
 int _putchar(char);
+void swapper(char *norman, char *jeffray);
 
 #endif
