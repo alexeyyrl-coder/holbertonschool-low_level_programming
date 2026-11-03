@@ -17,11 +17,20 @@ void puts_half(char *str)
 		index++;
 	}
 
+	if (index % 3 == 0)
+	{
+		for (i = index / 3; i < index; i++)
+		{
+			_putchar(str[i]);
+		}
+		_putchar('\n');
+		return;
+	}
+
 	for (i = index / 2; i < index; i++)
 	{
 		_putchar(str[i]);
 	}
-
 
 	_putchar('\n');
 }
