@@ -13,7 +13,7 @@ int _strlen(char *stix)
 	while (*stix != '\0')
 	{
 		count++;
-		*stix++;
+		stix++;
 	}
 	return (count);
 
