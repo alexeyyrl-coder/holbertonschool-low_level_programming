@@ -52,7 +52,7 @@ void rev_string(char *str)
 
 	while (firstime < &str[end])
 	{
-		swapper(firstime, str);
+		swapper(firstime, &str[end]);
 		firstime++;
 		end--;
 	}
