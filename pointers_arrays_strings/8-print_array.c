@@ -1,4 +1,6 @@
+#include <stdio.h>
 #include "main.h"
+
 
 /**
 * print_array - Entry point of the program
