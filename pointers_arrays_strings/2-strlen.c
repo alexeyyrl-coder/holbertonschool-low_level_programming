@@ -8,12 +8,13 @@
 
 int _strlen(char *stix)
 {
-	int count;
+	int count = 0;
 
 	while (*stix != "\n")
 	{
 		count++;
 		*stix++;
 	}
+	return (count);
 
 }
