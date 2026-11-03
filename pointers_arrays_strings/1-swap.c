@@ -10,10 +10,11 @@
 void swap_int(int *norman, int *jeffray)
 {
 	int temp;
+	temp = 0;
 
-	temp = norman;
+	temp = *norman;
 
-	*norman = jeffray;
+	*norman = *jeffray;
 	*jeffray = temp;
 
 }
