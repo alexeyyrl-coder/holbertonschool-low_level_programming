@@ -8,7 +8,7 @@
 
 void print_rev(char *str)
 {
-	char firstime = str;
+	char *firstime = str;
 
 	while (*str != '\0')
 	{
@@ -17,8 +17,8 @@ void print_rev(char *str)
 
 	while (str != firstime)
 	{
-		_putchar(*str);
 		str--;
+		_putchar(*str);
 	}
 
 
