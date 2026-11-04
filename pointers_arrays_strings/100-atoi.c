@@ -61,7 +61,7 @@ int negative_process(int verf, char *s)
 int _atoi(char *s)
 {
 	int selector = 0;
-	int dec;
+	int dec = 0;
 
 	while (*s != '\0')
 	{
