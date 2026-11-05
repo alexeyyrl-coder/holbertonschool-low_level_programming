@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* reset_to_98 - Entry point of the program
+* _strncat - Entry point of the program
 * @dest: - est un pointeur
 * @src: - est un pointeru
 * @n: - number
@@ -15,7 +15,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	for (i = 0; dest[i] != '\0'; i++)
 	{}
-	for (j = 0; j < n; j++)
+	for (j = 0; j < n && src[j] != '\0' ; j++)
 	{
 		dest[i] = src[j];
 		i++;
