@@ -19,7 +19,7 @@ void swap_int(int *norman, int *jeffray)
 }
 
 /**
-* void reverse_array(int *a, int n) - Entry point of the program
+* reverse_array - Entry point of the program
 * @a: - est un pointeur
 * @n: - est un pointeur
 * Return: Always 0 (Success)
