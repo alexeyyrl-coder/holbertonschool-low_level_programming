@@ -27,12 +27,14 @@ void swap_int(int *norman, int *jeffray)
 void reverse_array(int *a, int n)
 {
 	int i;
+	int end;
+	end = n - 1;
 
     i = 0;
-    while (i < n / 2 + n % 2)
+    while (i < n / 2)
     {
-		swap_int(&a[i], &a[n]);
+		swap_int(&a[i], &a[end]);
 	    i++;
-		n--;
+		end--;
 	}
 }
