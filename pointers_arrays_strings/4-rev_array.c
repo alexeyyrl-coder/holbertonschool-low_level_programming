@@ -19,8 +19,9 @@ void swap_int(int *norman, int *jeffray)
 }
 
 /**
-* reset_to_98 - Entry point of the program
-* @norman: - est un pointeur
+* void reverse_array(int *a, int n) - Entry point of the program
+* @a: - est un pointeur
+* @n: - est un pointeur
 * Return: Always 0 (Success)
 */
 
@@ -28,11 +29,12 @@ void reverse_array(int *a, int n)
 {
 	int i;
 	int end;
+
 	end = n - 1;
 
-    i = 0;
-    while (i < n / 2)
-    {
+	i = 0;
+	while (i < n / 2)
+	{
 		swap_int(&a[i], &a[end]);
 	    i++;
 		end--;
