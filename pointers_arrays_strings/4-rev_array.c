@@ -29,7 +29,7 @@ void reverse_array(int *a, int n)
 	int i;
 
     i = 0;
-    while (i < n / 2)
+    while (i < n / 2 + n % 2)
     {
 		swap_int(&a[i], &a[n]);
 	    i++;
