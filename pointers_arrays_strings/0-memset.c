@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
-* _strcat - Entry point of the program
-* @dest: - est un pointeur
-* @src: - est un autre pointeur
+* _memset - Entry point of the program
+* @s: - est un pointeur
+* @b: - est un autre pointeur
+* @n: - int
 * Return: Always 0 (Success)
 */
 
@@ -15,6 +16,6 @@ char *_memset(char *s, char b, unsigned int n)
 	{
 		s[i] = b;
 	}
-	
-	return(s);
+
+	return (s);
 }
