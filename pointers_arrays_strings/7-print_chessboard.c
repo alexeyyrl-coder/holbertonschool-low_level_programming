@@ -1,9 +1,8 @@
 #include "main.h"
 
 /**
-* _strcat - Entry point of the program
-* @dest: - est un pointeur
-* @src: - est un autre pointeur
+* print_chessboard - Entry point of the program
+* @a: - est un autre pointeur
 * Return: Always 0 (Success)
 */
 void print_chessboard(char (*a)[8])
