@@ -60,6 +60,18 @@ int main(void)
 			break;
 
 		case 4:
+		printf("Enter first number: ");
+		scanf("%d", &a);
+		printf("Enter secound number: ");
+		scanf("%d", &b);
+		if (a == 0 || b == 0)
+		{
+			printf("Cannot divide by zero\n");
+			break;
+		}
+		result = a * b;
+		printf("result: %d\n", result);
+			break;
 
 		default:
 		printf("Invalid choice\n");
