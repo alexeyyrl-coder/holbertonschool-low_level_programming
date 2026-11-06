@@ -1,5 +1,21 @@
 #include "main.h"
-#include <stdio.h>
+
+/**
+* print_number - Entry point of the program
+* @n: - est un pointeur
+* Return: Always 0 (Success)
+*/
+
+void print_number(unsigned int n)
+{
+	if (n >= 10)
+	{
+		print_number(n / 10);
+		_putchar((n % 10) + '0');
+	}
+
+	_putchar(n + '0');
+}
 
 /**
 * print_diagsums - Entry point of the program
@@ -11,15 +27,18 @@
 void print_diagsums(int *a, int size)
 {
 	int i;
-	int j;
+	int sum1 = 0;
+	int sum2 = 0;
 
 	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < size; j++)
-		{
-			_putchar(a[i * size + j]);
-		}
-
-		_putchar('\n');
+		sum1 += (a[i * size + i]);
+		sum2 += (a[i * size + (size - 1 - i)]);
 	}
+
+	print_number(sum1);
+	_putchar(',');
+	_putchar(' ');
+	print_number(sum2);
+	_putchar('\n');
 }
