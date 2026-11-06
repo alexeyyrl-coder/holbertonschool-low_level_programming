@@ -51,7 +51,14 @@ int main(void)
 			break;
 		
 		case 3:
-		
+		printf("Enter first number: ");
+		scanf("%d", &a);
+		printf("Enter secound number: ");
+		scanf("%d", &b);
+		result = a * b;
+		printf("result: %d\n", result);
+			break;
+
 		case 4:
 
 		default:
