@@ -16,6 +16,9 @@ void print_menu(void)
 int main(void)
 {
 	int choic;
+	int a;
+	int b;
+	int result;
 
 	choic = -1;
 	while (choic != 0)
@@ -28,6 +31,21 @@ int main(void)
 		case 0:
 		printf("Bye\n");
 			break;
+
+		case 1:
+		printf("Enter first number: ");
+		scanf("%d", &a);
+		printf("Enter secound number: ");
+		scanf("%d", &b);
+		result = a + b;
+		printf("result: %d\n", result);
+			break;
+		
+		case 2:
+		
+		case 3:
+		
+		case 4:
 
 		default:
 		printf("Invalid choice\n");
