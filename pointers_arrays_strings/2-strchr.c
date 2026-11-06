@@ -12,7 +12,7 @@ char *_strchr(char *s, char c)
 {
 	int i;
 
-	if (s == NULL)
+	if (s == NULL || c == '\0')
 	{
 		return (NULL);
 	}
@@ -21,9 +21,9 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			return(&s[i]);
+			return (&s[i]);
 		}
-		
+
 	}
 
 	return (NULL);
