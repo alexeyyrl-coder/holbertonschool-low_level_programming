@@ -21,7 +21,7 @@ int _strlen(char *stix)
 }
 
 /**
-* _memset - Entry point of the program
+* _strdup - Entry point of the program
 * @str: - est un pointeur
 * Return: Always 0 (Success)
 */
@@ -37,17 +37,17 @@ char *_strdup(char *str)
 	}
 
 	s = malloc(_strlen(str) + 1);
-	
+
 	if (s == NULL)
 	{
 		return (NULL);
 	}
-	
+
 
 	for (i = 0; i < _strlen(str); i++)
 	{
 		s[i] = str[i];
 	}
 
-	return(s);
+	return (s);
 }
