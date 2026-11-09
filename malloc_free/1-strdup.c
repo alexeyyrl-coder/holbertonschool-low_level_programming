@@ -28,7 +28,7 @@ int _strlen(char *stix)
 
 char *_strdup(char *str)
 {
-	unsigned int i;
+	int i;
 	char *s;
 
 	if (str == NULL)
