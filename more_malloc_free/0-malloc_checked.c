@@ -11,12 +11,13 @@ void *malloc_checked(unsigned int b)
 {
 	void *looc;
 
+
+	looc = malloc(b);
+
 	if (looc == NULL)
 	{
 		exit(98);
 	}
-
-	looc = malloc(sizeof(looc) * b);
 
 	return (looc);
 
