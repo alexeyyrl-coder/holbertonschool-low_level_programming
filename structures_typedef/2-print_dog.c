@@ -15,17 +15,20 @@ void print_dog(struct dog *d)
 		return;
 	}
 
-	char *nim = d->name;
-	char *awn = d->owner;
+	char *nim;
+	char *awn;
+
+	nim = d->name;
+	awn = d->owner;
 
 	if (d->name == NULL)
 	{
-		printf("Name: (nil)\n");
+		*nim = "(nil)";
 	}
 
 	if (d->owner == NULL)
 	{
-		awn = "(nil)";
+		*awn = "(nil)";
 	}
 
 	printf("Name: %s\n", nim);
