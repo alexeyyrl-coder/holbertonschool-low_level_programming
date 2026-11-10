@@ -3,32 +3,33 @@
 #include <stdio.h>
 
 /**
-* init_dog - Entry point of the program
+* print_dog - Entry point of the program
 * @d: - est un pointeur
 * Return: Always 0 (Success)
 */
 
 void print_dog(struct dog *d)
 {
+	char *nim;
+	char *awn;
+
 	if (d == NULL)
 	{
 		return;
 	}
 
-	char *nim;
-	char *awn;
 
 	nim = d->name;
 	awn = d->owner;
 
 	if (d->name == NULL)
 	{
-		*nim = "(nil)";
+		nim = "(nil)";
 	}
 
 	if (d->owner == NULL)
 	{
-		*awn = "(nil)";
+		awn = "(nil)";
 	}
 
 	printf("Name: %s\n", nim);
