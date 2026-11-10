@@ -82,10 +82,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		str[i] = s1[i];
 	}
 	str[i] = '\0';
-	
+
 
 	str = _strncat(str, s2, n);
 
-	return(str);
+	return (str);
 
 }
