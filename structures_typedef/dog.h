@@ -1,7 +1,13 @@
 #ifndef DOG_H
 #define DOG_H
 
-/* contenu du header ici */
+/**
+ * struct dog - Structure representing a dog
+ * @name: Name of the dog
+ * @age: Age of the dog
+ * @owner: Name of the dog's owner
+ */
+
 struct dog
 {
 	char *name;
