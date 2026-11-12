@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-* _strdup - Entry point of the program
-* @str: - est un pointeur
+* _puts_recursion - Entry point of the program
+* @s: - est un pointeur
 * Return: Always 0 (Success)
 */
 
