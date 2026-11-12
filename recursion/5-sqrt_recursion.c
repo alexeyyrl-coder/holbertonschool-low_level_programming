@@ -2,7 +2,6 @@
 
 /**
 * funky_style - Entry point of the program
-* @n: - est un pointeur
 * @j: - est un pointeur
 * @v: - est un pointeur
 * Return: Always 0 (Success)
