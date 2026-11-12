@@ -21,7 +21,7 @@ int funky_style(int j, int v)
 		return (funky_style((j + 1), v));
 	}
 
-	return (v);
+	return (j);
 }
 
 /**
