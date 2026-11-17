@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_name - Checks if a character is lowercase
+ * print_numbers - Checks if a character is lowercase
  * @separator: Character to check
  * @n: est un pointeur de fonction
  * Return: 1 if lowercase, 0 otherwise
