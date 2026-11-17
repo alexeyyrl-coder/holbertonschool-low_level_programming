@@ -23,8 +23,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("(nil)");
 		}
-
-		printf("%s", textuss);
+		else
+		{
+			printf("%s", textuss);
+		}
 
 		if (separator != NULL && i != n - 1)
 		{
