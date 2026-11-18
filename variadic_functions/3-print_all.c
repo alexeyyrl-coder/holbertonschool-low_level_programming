@@ -35,7 +35,7 @@ void pass(char format, va_list *agiz, char **sep)
 				{
 					textuss = "(nil)";
 				}
-				printf("%s%s", sep, textuss);
+				printf("%s%s", *sep, textuss);
 				*sep = ", ";
 				break;
 
