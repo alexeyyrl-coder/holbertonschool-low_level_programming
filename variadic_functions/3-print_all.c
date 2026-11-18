@@ -15,18 +15,18 @@ void pass(char format, va_list *agiz, char **sep)
 	switch (format)
 			{
 				case 'i':
-				printf("%s%d", sep, va_arg(*agiz, int));
-				sep = ", ";
+				printf("%s%d", *sep, va_arg(*agiz, int));
+				*sep = ", ";
 				break;
 
 				case 'f':
-				printf("%s%f", sep, va_arg(*agiz, double));
-				sep = ", ";
+				printf("%s%f", *sep, va_arg(*agiz, double));
+				*sep = ", ";
 				break;
 
 				case 'c':
-				printf("%s%c", sep, va_arg(*agiz, int));
-				sep = ", ";
+				printf("%s%c", *sep, va_arg(*agiz, int));
+				*sep = ", ";
 				break;
 
 				case 's':
@@ -36,7 +36,7 @@ void pass(char format, va_list *agiz, char **sep)
 					textuss = "(nil)";
 				}
 				printf("%s%s", sep, textuss);
-				sep = ", ";
+				*sep = ", ";
 				break;
 
 				default:
@@ -63,7 +63,7 @@ void print_all(const char * const format, ...)
 
 		while (format[j] != '\0')
 		{
-			pass(format, &agiz, &sep);
+			pass(format[j], &agiz, &sep);
 			j++;
 		}
 	}
