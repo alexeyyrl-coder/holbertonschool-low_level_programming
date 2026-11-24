@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_name - Checks if a character is lowercase
+ * add_node - Checks if a character is lowercase
  * @head: Character to check
  * @str: est un pointeur de fonction
  * Return: 1 if lowercase, 0 otherwise
