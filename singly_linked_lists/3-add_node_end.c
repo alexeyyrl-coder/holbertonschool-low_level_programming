@@ -2,22 +2,22 @@
 
 /**
  * strp - Checks if a character is lowercase
- * @str: est un pointeur de fonction
+ * @stri: est un pointeur de fonction
  * Return: 1 if lowercase, 0 otherwise
  */
 
-char strp(char *str)
+char strp(char *stri)
 {
-	char *stang;
+	char *stangu;
 
-	stang = strdup(str);
-	if (!stang)
+	stangu = strdup(str);
+	if (!stangu)
 	{
 		free(nod);
 		return (NULL);
 	}
 
-	return (stang);
+	return (stangu);
 }
 
 /**
