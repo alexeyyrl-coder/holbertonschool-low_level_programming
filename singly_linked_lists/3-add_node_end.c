@@ -1,9 +1,29 @@
 #include "lists.h"
 
 /**
- * print_name - Checks if a character is lowercase
- * @name: Character to check
- * @f: est un pointeur de fonction
+ * strp - Checks if a character is lowercase
+ * @str: est un pointeur de fonction
+ * Return: 1 if lowercase, 0 otherwise
+ */
+
+char strp(char *str)
+{
+	char *stang;
+
+	stang = strdup(str);
+	if (!stang)
+	{
+		free(nod);
+		return (NULL);
+	}
+
+	return (stang);
+}
+
+/**
+ * add_node_end - Checks if a character is lowercase
+ * @head: Character to check
+ * @str: est un pointeur de fonction
  * Return: 1 if lowercase, 0 otherwise
  */
 
@@ -19,17 +39,10 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 
-
+	stang = strp(stang);
 	nod = malloc(sizeof(*nod));
 	if (!nod)
 	{
-		return (NULL);
-	}
-
-	stang = strdup(str);
-	if (!stang)
-	{
-		free(nod);
 		return (NULL);
 	}
 
@@ -52,7 +65,6 @@ list_t *add_node_end(list_t **head, const char *str)
 		}
 		cusor->next = nod;
 	}
-
 
 	return (nod);
 
