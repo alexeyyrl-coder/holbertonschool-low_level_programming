@@ -34,16 +34,21 @@ list_t *add_node_end(list_t **head, const char *str)
 	int i;
 
 	if (!head || !str)
+	{
 		return (NULL);
+	}
 
 	stang = strp(str);
 	if (!stang)
+	{
 		return (NULL);
-
+	}
 	nod = malloc(sizeof(*nod));
 	if (!nod)
+	{
 		free(stang);
 		return (NULL);
+	}
 
 	for (i = 0; str[i] != '\0' ; i++)
 	{}
@@ -53,7 +58,9 @@ list_t *add_node_end(list_t **head, const char *str)
 	nod->next = NULL;
 
 	if (*head == NULL)
+	{
 		*head = nod;
+	}
 	else
 	{
 		while (cusor->next != NULL)
