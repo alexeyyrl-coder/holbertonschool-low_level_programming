@@ -6,14 +6,13 @@
  * Return: 1 if lowercase, 0 otherwise
  */
 
-char strp(char *stri)
+char *strp(const char *stri)
 {
 	char *stangu;
 
-	stangu = strdup(str);
+	stangu = strdup(stri);
 	if (!stangu)
 	{
-		free(nod);
 		return (NULL);
 	}
 
@@ -35,16 +34,16 @@ list_t *add_node_end(list_t **head, const char *str)
 	int i;
 
 	if (!head || !str)
-	{
 		return (NULL);
-	}
 
-	stang = strp(stang);
+	stang = strp(str);
+	if (!stang)
+		return (NULL);
+
 	nod = malloc(sizeof(*nod));
 	if (!nod)
-	{
+		free(stang);
 		return (NULL);
-	}
 
 	for (i = 0; str[i] != '\0' ; i++)
 	{}
@@ -54,9 +53,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	nod->next = NULL;
 
 	if (*head == NULL)
-	{
 		*head = nod;
-	}
 	else
 	{
 		while (cusor->next != NULL)
