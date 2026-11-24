@@ -3,7 +3,7 @@
 int main(void)
 {
 	char amis[] = "Bonjour les amis";
-	char voyl[] = "aeiouy";
+	char voyl[] = "aeiouyAEIOUY";
 	int i;
 	int j;
 	int voy = 0;
