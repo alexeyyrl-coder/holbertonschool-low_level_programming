@@ -6,7 +6,11 @@ int main(void)
 
 	while (i <= 100)
 	{
-		printf("%d ", i);
+		if (i % 2 == 0)
+		{
+			printf("%d ", i);
+		}
+		
 
 		i++;
 	}
