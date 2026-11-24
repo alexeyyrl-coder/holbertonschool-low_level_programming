@@ -1,61 +1,59 @@
 #include "lists.h"
+#include <string.h>
 
 /**
- * strp - Checks if a character is lowercase
- * @stri: est un pointeur de fonction
- * Return: 1 if lowercase, 0 otherwise
+ * create_node - Creates a new node
+ * @str: String to duplicate
+ * Return: Address of the new node or NULL
  */
-
-char *strp(const char *stri)
+static list_t *create_node(const char *str)
 {
-	char *stangu;
+	list_t *nod;
+	char *stang;
+	unsigned int i;
 
-	stangu = strdup(stri);
-	if (!stangu)
+	nod = malloc(sizeof(*nod));
+	if (!nod)
+		return (NULL);
+
+	stang = strdup(str);
+	if (!stang)
 	{
+		free(nod);
 		return (NULL);
 	}
 
-	return (stangu);
+	for (i = 0; str[i] != '\0'; i++)
+		;
+
+	nod->str = stang;
+	nod->len = i;
+	nod->next = NULL;
+
+	return (nod);
 }
 
 /**
- * add_node_end - Checks if a character is lowercase
- * @head: Character to check
- * @str: est un pointeur de fonction
- * Return: 1 if lowercase, 0 otherwise
+ * add_node_end - Adds a node at the end of a list
+ * @head: Address of the head pointer
+ * @str: String to duplicate
+ * Return: Address of the new node or NULL
  */
-
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *nod;
 	list_t *cusor;
-	char *stang;
-	int i;
 
 	if (!head || !str)
 	{
 		return (NULL);
 	}
-
-	stang = strp(str);
-	if (!stang)
-	{
-		return (NULL);
-	}
-	nod = malloc(sizeof(*nod));
+	nod = create_node(str);
 	if (!nod)
 	{
-		free(stang);
 		return (NULL);
 	}
-
-	for (i = 0; str[i] != '\0' ; i++)
-	{}
-	nod->len = i;
 	cusor = *head;
-	nod->str = stang;
-	nod->next = NULL;
 
 	if (*head == NULL)
 	{
@@ -67,9 +65,9 @@ list_t *add_node_end(list_t **head, const char *str)
 		{
 			cusor = cusor->next;
 		}
+
 		cusor->next = nod;
 	}
 
 	return (nod);
-
 }
